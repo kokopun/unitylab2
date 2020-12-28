@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using CreatorKitCode;
 
 public class SpawnerSample : MonoBehaviour
@@ -8,22 +8,34 @@ public class SpawnerSample : MonoBehaviour
     void Start()
     {
         int angle = 15;
+		int radius =7;
         Vector3 spawnPosition = transform.position;
 
         Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
-        spawnPosition = transform.position + direction * 2;
+        spawnPosition = transform.position + direction * radius;
         Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
 
         angle = 55;
         direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
-        spawnPosition = transform.position + direction * 2;
+        spawnPosition = transform.position + direction * radius;
         Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
 
         angle = 95;
         direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
-        spawnPosition = transform.position + direction * 2;
+        spawnPosition = transform.position + direction * radius;
+        Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+
+   angle = 135;
+        direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
+        spawnPosition = transform.position + direction * radius;
         Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
     }
+
+void AddingNumbers(float num1, float num2)
+{
+  float resultingNumber;
+  resultingNumber = num1 + num2;
+}
 
     
 }
